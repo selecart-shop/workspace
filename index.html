@@ -18,6 +18,11 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.01); }
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg);
@@ -28,7 +33,6 @@
             flex-direction: column;
         }
 
-        /* Анімовані "метаболічні" кулі на фоні */
         .bg-blobs {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -51,28 +55,52 @@
         }
 
         header {
-            padding: 1.5rem 5%;
+            padding: 1.2rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             backdrop-filter: blur(15px);
             border-bottom: 1px solid var(--border);
-            z-index: 10;
+            z-index: 100;
+            position: sticky;
+            top: 0;
         }
 
-        .logo { font-weight: 800; font-size: 1.2rem; }
+        .logo { font-weight: 800; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; }
         .logo span { color: var(--violet); text-shadow: 0 0 10px var(--violet); }
+        .ua-flag { width: 22px; height: 15px; border-radius: 2px; background: linear-gradient(#0057b7 50%, #ffd700 50%); }
 
-        main { max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem; width: 100%; }
+        .crm-btn {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(139, 92, 246, 0.15);
+            border: 1px solid var(--violet);
+            padding: 0.5rem 2.5rem;
+            border-radius: 12px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+        }
+        .crm-btn:hover { background: var(--violet); box-shadow: 0 0 25px var(--violet); scale: 1.05; }
 
-        .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 3rem; text-align: center; }
+        .site-link { text-decoration: none; color: #94a3b8; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
+        .site-link:hover { color: var(--violet); }
+
+        main { max-width: 1200px; margin: 0 auto; padding: 3rem 1.5rem; width: 100%; }
+
+        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 3rem; text-align: center; letter-spacing: -2px; }
         .hero h1 span { color: var(--violet); }
 
-        /* Однакова сітка */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
+            animation: breathe 8s ease-in-out infinite;
         }
 
         .card {
@@ -88,67 +116,104 @@
             overflow: hidden;
         }
 
-        /* Ефект відблиску при наведенні */
         .card::after {
             content: '';
             position: absolute;
             top: 0; left: -100%; width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.1), transparent);
-            transition: 0.5s;
+            background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.15), transparent);
+            transition: 0.6s;
         }
 
         .card:hover {
             transform: translateY(-10px);
             border-color: var(--violet);
-            background: rgba(139, 92, 246, 0.05);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 15px rgba(139, 92, 246, 0.1);
+            background: rgba(139, 92, 246, 0.08);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
         }
 
         .card:hover::after { left: 100%; }
 
-        .card i {
-            font-size: 2.5rem;
-            color: var(--violet);
-            margin-bottom: 1.5rem;
-            display: block;
-            transition: 0.3s;
-        }
-        
+        .card i { font-size: 2.5rem; color: var(--violet); margin-bottom: 1.5rem; display: block; transition: 0.3s; }
         .card:hover i { transform: scale(1.2) rotate(5deg); }
 
-        .card h3 { font-size: 1.4rem; margin-bottom: 0.8rem; }
-        .card p { color: #94a3b8; font-size: 0.9rem; line-height: 1.5; }
+        .card h3 { font-size: 1.5rem; margin-bottom: 0.8rem; font-weight: 700; }
+        .card p { color: #94a3b8; font-size: 0.95rem; line-height: 1.5; }
 
-        /* Модалка */
         .modal {
-            position: fixed; inset: 0; background: rgba(0,0,0,0.95);
+            position: fixed; inset: 0; background: rgba(0,0,0,0.96);
             display: none; justify-content: center; align-items: center;
-            z-index: 1000; backdrop-filter: blur(20px);
+            z-index: 1000; backdrop-filter: blur(25px);
         }
         .modal-content {
-            width: 95%; height: 90vh; background: #000; border-radius: 30px;
+            width: 96%; height: 92vh; background: #000; border-radius: 32px;
             border: 1px solid var(--border); position: relative; overflow: hidden;
         }
         .close {
-            position: absolute; top: 20px; right: 20px;
-            width: 40px; height: 40px; background: #ef4444; color: #fff;
+            position: absolute; top: 20px; right: 25px;
+            width: 45px; height: 45px; background: #ef4444; color: #fff;
             border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            cursor: pointer; z-index: 10;
+            cursor: pointer; z-index: 10; transition: 0.3s;
         }
+        .close:hover { transform: rotate(90deg); scale: 1.1; }
         iframe { width: 100%; height: 100%; border: none; }
+
+        .loader {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px; height: 50px;
+            border: 3px solid var(--glass);
+            border-top: 3px solid var(--violet);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            display: none;
+        }
+        @keyframes spin { 
+            0% { transform: translate(-50%, -50%) rotate(0deg); } 
+            100% { transform: translate(-50%, -50%) rotate(360deg); } 
+        }
+
+        .links-hub {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            padding: 4rem 2rem;
+            height: 100%;
+            overflow-y: auto;
+        }
+        .hub-item {
+            background: rgba(255,255,255,0.04);
+            padding: 2rem;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border: 1px solid var(--border);
+            transition: 0.3s;
+            font-weight: 600;
+        }
+        .hub-item:hover { background: var(--violet); transform: scale(1.05); }
 
     </style>
 </head>
 <body>
 
     <div class="bg-blobs">
-        <div class="blob" style="width: 400px; height: 400px; top: -100px; left: -100px;"></div>
-        <div class="blob" style="width: 300px; height: 300px; bottom: 10%; right: 10%; animation-delay: -5s;"></div>
+        <div class="blob" style="width: 500px; height: 500px; top: -150px; left: -150px;"></div>
+        <div class="blob" style="width: 400px; height: 400px; bottom: 5%; right: 5%; animation-delay: -5s;"></div>
     </div>
 
     <header>
-        <div class="logo">Selecart <span>Workspace</span></div>
-        <a href="https://selecart.com.ua/" target="_blank" class="logo" style="text-decoration:none; font-size: 0.9rem;">SITE →</a>
+        <div class="logo">
+            <div class="ua-flag"></div>
+            Selecart <span>Workspace</span>
+        </div>
+        
+        <a href="http://tallside.lp-crm.biz" target="_blank" class="crm-btn">CRM</a>
+        
+        <a href="https://selecart.com.ua/" target="_blank" class="site-link">Сайт компанії</a>
     </header>
 
     <main>
@@ -158,39 +223,45 @@
 
         <div class="grid">
             <div class="card" onclick="openSheet('https://docs.google.com/spreadsheets/d/1ku8lOPpy6Fh3jR_n8cn0lAUmmLWGJDTCEK3HT2Ol6Vo/edit?rm=minimal')">
-                <i class="fas fa-file-invoice"></i>
+                <i class="fas fa-shield-halved"></i>
                 <h3>Регламент</h3>
-                <p>Базові правила та стандарти компанії Selecart.</p>
+                <p>Базові правила та стандарти компанії.</p>
             </div>
 
             <div class="card" onclick="openSheet('https://docs.google.com/spreadsheets/d/1GU1bWWbqblwtAfgmt64P9UDbT8VB3CND5INw0TYQzMw/edit?rm=minimal')">
-                <i class="fas fa-comments"></i>
+                <i class="fas fa-bolt"></i>
                 <h3>Скрипти</h3>
-                <p>Алгоритми діалогів та успішних продажів.</p>
+                <p>Алгоритми успішних діалогів.</p>
             </div>
 
             <div class="card" onclick="openSheet('https://docs.google.com/spreadsheets/d/1Y2wPgfz7_3wBiZ5LyuBddWsQRR-LscGbP8OPO19wuRQ/edit?rm=minimal')">
-                <i class="fas fa-magic"></i>
+                <i class="fas fa-wand-sparkles"></i>
                 <h3>Косметика</h3>
-                <p>Склад товарів та професійна консультація.</p>
+                <p>Знання продукту та склад товарів.</p>
             </div>
 
             <div class="card" onclick="openSheet('https://docs.google.com/spreadsheets/d/1TUMZ1LJn3uohUy9DwuBu6UI18P89TJ1BfPK8XqnZ4vE/edit?rm=minimal')">
-                <i class="fas fa-clock"></i>
+                <i class="fas fa-calendar-days"></i>
                 <h3>Графік</h3>
-                <p>Твій актуальний розклад роботи.</p>
+                <p>Твій розклад на кожен день.</p>
             </div>
 
             <div class="card" onclick="openSheet('https://docs.google.com/spreadsheets/d/14bu8sgCvABtd87oHMjC1AVCOih7TfKwOkNzE6DgeNhc/edit?rm=minimal')">
-                <i class="fas fa-lightbulb"></i>
+                <i class="fas fa-power-off"></i>
                 <h3>Відключення</h3>
-                <p>Оперативна інформація по енергомережі.</p>
+                <p>Інформація про стан мережі.</p>
             </div>
 
             <div class="card" onclick="window.open('https://drive.google.com/drive/folders/1oKrTC_SX79YqUScn1QGnSqgst1ibD-e6?hl=ru', '_blank')">
-                <i class="fas fa-images"></i>
+                <i class="fas fa-camera"></i>
                 <h3>Фото</h3>
                 <p>Архів медіафайлів та контенту.</p>
+            </div>
+
+            <div class="card" onclick="openLinksHub()">
+                <i class="fas fa-link"></i>
+                <h3>Посилання</h3>
+                <p>Усі активні лінки магазину.</p>
             </div>
         </div>
     </main>
@@ -198,16 +269,45 @@
     <div class="modal" id="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()"><i class="fas fa-times"></i></span>
-            <iframe id="frame" src=""></iframe>
+            <div id="loader" class="loader"></div>
+            <iframe id="frame" src="" style="display:none;"></iframe>
+            <div id="hub" class="links-hub" style="display:none;">
+                <h2 style="grid-column: 1/-1; text-align:center; margin-bottom: 2rem; font-size: 2.5rem;">Реєстр посилань</h2>
+                <a href="https://docs.google.com/spreadsheets/d/1ku8lOPpy6Fh3jR_n8cn0lAUmmLWGJDTCEK3HT2Ol6Vo/edit" target="_blank" class="hub-item"><i class="fas fa-file-excel" style="color:var(--violet)"></i> Таблиця: Регламент</a>
+                <a href="https://docs.google.com/spreadsheets/d/1GU1bWWbqblwtAfgmt64P9UDbT8VB3CND5INw0TYQzMw/edit" target="_blank" class="hub-item"><i class="fas fa-file-excel" style="color:var(--violet)"></i> Таблиця: Скрипти</a>
+                <a href="https://docs.google.com/spreadsheets/d/1Y2wPgfz7_3wBiZ5LyuBddWsQRR-LscGbP8OPO19wuRQ/edit" target="_blank" class="hub-item"><i class="fas fa-file-excel" style="color:var(--violet)"></i> Таблиця: Косметика</a>
+                <a href="https://docs.google.com/spreadsheets/d/1TUMZ1LJn3uohUy9DwuBu6UI18P89TJ1BfPK8XqnZ4vE/edit" target="_blank" class="hub-item"><i class="fas fa-file-excel" style="color:var(--violet)"></i> Таблиця: Графік</a>
+                <a href="https://docs.google.com/spreadsheets/d/14bu8sgCvABtd87oHMjC1AVCOih7TfKwOkNzE6DgeNhc/edit" target="_blank" class="hub-item"><i class="fas fa-file-excel" style="color:var(--violet)"></i> Таблиця: Відключення</a>
+                <a href="http://tallside.lp-crm.biz" target="_blank" class="hub-item"><i class="fas fa-database" style="color:var(--violet)"></i> LP-CRM Система</a>
+                <a href="https://selecart.com.ua/" target="_blank" class="hub-item"><i class="fas fa-shopping-bag" style="color:var(--violet)"></i> Сайт компанії</a>
+                <a href="https://drive.google.com/drive/folders/1oKrTC_SX79YqUScn1QGnSqgst1ibD-e6" target="_blank" class="hub-item"><i class="fas fa-images" style="color:var(--violet)"></i> Фотоархів Drive</a>
+            </div>
         </div>
     </div>
 
     <script>
         const modal = document.getElementById('modal');
         const frame = document.getElementById('frame');
+        const hub = document.getElementById('hub');
+        const loader = document.getElementById('loader');
 
         function openSheet(url) {
+            hub.style.display = 'none';
+            loader.style.display = 'block';
+            frame.style.display = 'block';
             frame.src = url;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+
+            frame.onload = function() {
+                loader.style.display = 'none';
+            };
+        }
+
+        function openLinksHub() {
+            frame.style.display = 'none';
+            frame.src = '';
+            hub.style.display = 'grid';
             modal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
         }
@@ -215,8 +315,11 @@
         function closeModal() {
             modal.style.display = 'none';
             frame.src = '';
+            loader.style.display = 'none';
             document.body.style.overflow = 'auto';
         }
+        
+        window.onclick = (e) => { if(e.target == modal) closeModal(); }
     </script>
 </body>
 </html>
