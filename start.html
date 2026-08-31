@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="uk" class="h-full bg-slate-950 text-slate-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>База знань менеджера | SELECART</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+    @keyframes spinLoader {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    .custom-spinner {
+      animation: spinLoader 0.8s linear infinite;
+    }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.-right-16{right:-4rem}.-top-16{top:-4rem}.right-4{right:1rem}.top-0{top:0px}.top-3{top:0.75rem}.top-4{top:1rem}.z-10{z-index:10}.z-20{z-index:20}.z-30{z-index:30}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.my-auto{margin-top:auto;margin-bottom:auto}.mb-1{margin-bottom:0.25rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-1\.5{margin-top:0.375rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-12{height:3rem}.h-5{height:1.25rem}.h-64{height:16rem}.h-\[94vh\]{height:94vh}.h-full{height:100%}.h-4{height:1rem}.h-6{height:1.5rem}.max-h-\[90vh\]{max-height:90vh}.min-h-full{min-height:100%}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-12{width:3rem}.w-5{width:1.25rem}.w-64{width:16rem}.w-full{width:100%}.w-4{width:1rem}.w-6{width:1.5rem}.min-w-0{min-width:0px}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.max-w-sm{max-width:24rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-md{border-radius:0.375rem}.border{border-width:1px}.border-0{border-width:0px}.border-4{border-width:4px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-indigo-500\/20{border-color:rgb(99 102 241 / 0.2)}.border-indigo-500\/30{border-color:rgb(99 102 241 / 0.3)}.border-indigo-800\/60{border-color:rgb(55 48 163 / 0.6)}.border-indigo-950{--tw-border-opacity:1;border-color:rgb(30 27 75 / var(--tw-border-opacity, 1))}.border-rose-500\/20{border-color:rgb(244 63 94 / 0.2)}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-slate-800\/80{border-color:rgb(30 41 59 / 0.8)}.border-amber-500\/20{border-color:rgb(245 158 11 / 0.2)}.border-emerald-500\/20{border-color:rgb(16 185 129 / 0.2)}.border-purple-500\/20{border-color:rgb(168 85 247 / 0.2)}.border-rose-500\/40{border-color:rgb(244 63 94 / 0.4)}.border-rose-500\/30{border-color:rgb(244 63 94 / 0.3)}.border-t-indigo-500{--tw-border-opacity:1;border-top-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-black\/80{background-color:rgb(0 0 0 / 0.8)}.bg-black\/95{background-color:rgb(0 0 0 / 0.95)}.bg-indigo-500\/10{background-color:rgb(99 102 241 / 0.1)}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.bg-indigo-600\/10{background-color:rgb(79 70 229 / 0.1)}.bg-indigo-600\/20{background-color:rgb(79 70 229 / 0.2)}.bg-indigo-950\/40{background-color:rgb(30 27 75 / 0.4)}.bg-rose-500\/10{background-color:rgb(244 63 94 / 0.1)}.bg-rose-600{--tw-bg-opacity:1;background-color:rgb(225 29 72 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-900\/60{background-color:rgb(15 23 42 / 0.6)}.bg-slate-900\/80{background-color:rgb(15 23 42 / 0.8)}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(2 6 23 / var(--tw-bg-opacity, 1))}.bg-slate-950\/80{background-color:rgb(2 6 23 / 0.8)}.bg-amber-500\/10{background-color:rgb(245 158 11 / 0.1)}.bg-emerald-500\/10{background-color:rgb(16 185 129 / 0.1)}.bg-purple-500\/10{background-color:rgb(168 85 247 / 0.1)}.bg-rose-950\/30{background-color:rgb(76 5 25 / 0.3)}.bg-rose-950\/20{background-color:rgb(76 5 25 / 0.2)}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.bg-gradient-to-tr{background-image:linear-gradient(to top right, var(--tw-gradient-stops))}.from-emerald-600{--tw-gradient-from:#059669 var(--tw-gradient-from-position);--tw-gradient-to:rgb(5 150 105 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-indigo-600{--tw-gradient-from:#4f46e5 var(--tw-gradient-from-position);--tw-gradient-to:rgb(79 70 229 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-slate-950{--tw-gradient-from:#020617 var(--tw-gradient-from-position);--tw-gradient-to:rgb(2 6 23 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-slate-900{--tw-gradient-to:rgb(15 23 42 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #0f172a var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-slate-950{--tw-gradient-to:#020617 var(--tw-gradient-to-position)}.to-teal-600{--tw-gradient-to:#0d9488 var(--tw-gradient-to-position)}.to-violet-500{--tw-gradient-to:#8b5cf6 var(--tw-gradient-to-position)}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.py-8{padding-top:2rem;padding-bottom:2rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.pb-2{padding-bottom:0.5rem}.pr-20{padding-right:5rem}.pt-3{padding-top:0.75rem}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.text-indigo-300{--tw-text-opacity:1;color:rgb(165 180 252 / var(--tw-text-opacity, 1))}.text-indigo-400{--tw-text-opacity:1;color:rgb(129 140 248 / var(--tw-text-opacity, 1))}.text-rose-400{--tw-text-opacity:1;color:rgb(251 113 133 / var(--tw-text-opacity, 1))}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-purple-400{--tw-text-opacity:1;color:rgb(192 132 252 / var(--tw-text-opacity, 1))}.text-rose-300{--tw-text-opacity:1;color:rgb(253 164 175 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-emerald-600\/20{--tw-shadow-color:rgb(5 150 105 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-indigo-500\/20{--tw-shadow-color:rgb(99 102 241 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-indigo-600\/20{--tw-shadow-color:rgb(79 70 229 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.blur-3xl{--tw-blur:blur(64px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-2xl{--tw-backdrop-blur:blur(40px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.selection\:bg-indigo-500 *::selection{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:bg-indigo-500::selection{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:-translate-y-1:hover{--tw-translate-y:-0.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:rotate-90:hover{--tw-rotate:90deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-110:hover{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-indigo-500\/50:hover{border-color:rgb(99 102 241 / 0.5)}.hover\:bg-indigo-500:hover{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-500:hover{--tw-bg-opacity:1;background-color:rgb(244 63 94 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-800\/90:hover{background-color:rgb(30 41 59 / 0.9)}.hover\:bg-rose-500\/20:hover{background-color:rgb(244 63 94 / 0.2)}.hover\:from-emerald-500:hover{--tw-gradient-from:#10b981 var(--tw-gradient-from-position);--tw-gradient-to:rgb(16 185 129 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:to-teal-500:hover{--tw-gradient-to:#14b8a6 var(--tw-gradient-to-position)}.hover\:text-indigo-400:hover{--tw-text-opacity:1;color:rgb(129 140 248 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:text-rose-300:hover{--tw-text-opacity:1;color:rgb(253 164 175 / var(--tw-text-opacity, 1))}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:shadow-indigo-500\/5:hover{--tw-shadow-color:rgb(99 102 241 / 0.05);--tw-shadow:var(--tw-shadow-colored)}.focus\:border-indigo-500:focus{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.focus\:border-rose-500:focus{--tw-border-opacity:1;border-color:rgb(244 63 94 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.active\:bg-indigo-700:active{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:text-indigo-400{--tw-text-opacity:1;color:rgb(129 140 248 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:p-4{padding:1rem}.sm\:p-6{padding:1.5rem}.sm\:p-8{padding:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:py-10{padding-top:2.5rem;padding-bottom:2.5rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}</style></head>
+<body class="min-h-full flex flex-col bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white" style="overflow: auto;">
+
+  <header class="sticky top-0 z-40 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div id="siteLogo" class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center font-black text-xl shadow-lg shadow-indigo-500/20 text-white">
+          S
+        </div>
+        <div>
+          <div class="font-extrabold text-lg tracking-tight text-white flex items-center gap-2">
+            <span id="siteTitle">SELECART</span> 
+            <span id="siteTag" class="text-xs px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-medium">СТАЖУВАННЯ</span>
+          </div>
+          <p id="siteSubtitle" class="text-xs text-slate-400">Навчальний центр для нових менеджерів</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-8 sm:py-10">
+    
+    <!-- Hero banner -->
+    <div class="mb-8 bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 sm:p-8 backdrop-blur-sm relative overflow-hidden">
+      <div class="absolute -right-16 -top-16 w-64 h-64 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="max-w-3xl">
+        <h1 id="heroTitle" class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-3">НА КОЖНІЙ КАРТЦІ ЧЕРВОНИМ ПОЗНАЧЕНО, ЩО ТРЕБА ВИВЧИТИ</h1>
+        <p id="heroDesc" class="text-slate-300 text-sm sm:text-base leading-relaxed">ОЗНАЙОМТЕСЯ З КОЖНИМ БЛОКОМ ПО ЧЕРЗІ:  перегляньте відеоінструкції, розбери мотивацію та вивчи робочі скрипти діалогів. Натискай "ВІДКРИТИ МАТЕРІАЛ"  для перегляду</p>
+      </div>
+    </div>
+    <!-- Cards grid -->
+    <div id="cardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"><div class="group bg-slate-900/80 hover:bg-slate-800/90 border border-slate-800 hover:border-indigo-500/50 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/5 relative overflow-hidden">
+          <div>
+            <!-- Header badge -->
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="text-xs px-2.5 py-1 rounded-md font-medium bg-rose-500/10 text-rose-400 border border-rose-500/20">
+                Відео ОБОВ'ЯЗКОВО ПЕРЕГЛЯНУТИ
+              </span>
+            </div>
+
+            <!-- Title & icon -->
+            <div class="flex items-start gap-3 mb-3">
+              <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <svg class="w-6 h-6 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-base leading-snug group-hover:text-indigo-400 transition-colors">
+                  1. Вступ. Загальна інформація
+                </h3>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <p class="text-xs sm:text-sm text-slate-400 mb-4 leading-relaxed">
+              Загальний огляд компанії, цілі, стандарти роботи та ключові правила менеджера.
+            </p>
+          </div>
+
+          <!-- RED BLOCK: What to learn (Fully red text & box) + Trigger button -->
+          <div class="pt-3 border-t border-slate-800/80">
+            <div class="mb-4 bg-rose-950/30 rounded-xl p-3 border border-rose-500/40">
+              <div class="text-[11px] font-bold text-rose-400 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                <i class="fas fa-exclamation-circle text-rose-400 text-xs"></i>
+                <span>ЩО ТРЕБА ВИВЧИТИ:</span>
+              </div>
+              <p class="text-xs text-rose-300 font-medium leading-relaxed">Зрозуміти позиціювання бренду, формат взаємодії та внутрішню дисципліну команди.</p>
+            </div>
+
+            <button onclick="openViewer('intro-video')" class="w-full py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/20 transition-all">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+              Відкрити матеріал
+            </button>
+          </div>
+        </div><div class="group bg-slate-900/80 hover:bg-slate-800/90 border border-slate-800 hover:border-indigo-500/50 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/5 relative overflow-hidden">
+          <div>
+            <!-- Header badge -->
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="text-xs px-2.5 py-1 rounded-md font-medium bg-rose-500/10 text-rose-400 border border-rose-500/20">
+                Відео ОБОВ'ЯЗКОВО ПЕРЕГЛЯНУТИ
+              </span>
+            </div>
+
+            <!-- Title & icon -->
+            <div class="flex items-start gap-3 mb-3">
+              <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <svg class="w-6 h-6 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-base leading-snug group-hover:text-indigo-400 transition-colors">
+                  2. Робота в CRM-системі
+                </h3>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <p class="text-xs sm:text-sm text-slate-400 mb-4 leading-relaxed">
+              Практичний розбір функціоналу CRM: обробка замовлень, статуси лідів і коментарі.
+            </p>
+          </div>
+
+          <!-- RED BLOCK: What to learn (Fully red text & box) + Trigger button -->
+          <div class="pt-3 border-t border-slate-800/80">
+            <div class="mb-4 bg-rose-950/30 rounded-xl p-3 border border-rose-500/40">
+              <div class="text-[11px] font-bold text-rose-400 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                <i class="fas fa-exclamation-circle text-rose-400 text-xs"></i>
+                <span>ЩО ТРЕБА ВИВЧИТИ:</span>
+              </div>
+              <p class="text-xs text-rose-300 font-medium leading-relaxed">Як швидко створювати картки, змінювати статуси та не губити клієнтські заявки.</p>
+            </div>
+
+            <button onclick="openViewer('crm-video')" class="w-full py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/20 transition-all">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+              Відкрити матеріал
+            </button>
+          </div>
+        </div><div class="group bg-slate-900/80 hover:bg-slate-800/90 border border-slate-800 hover:border-indigo-500/50 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/5 relative overflow-hidden">
+          <div>
+            <!-- Header badge -->
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="text-xs px-2.5 py-1 rounded-md font-medium bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                PDF Документ
+              </span>
+            </div>
+
+            <!-- Title & icon -->
+            <div class="flex items-start gap-3 mb-3">
+              <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-base leading-snug group-hover:text-indigo-400 transition-colors">
+                  3. Система мотивації
+                </h3>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <p class="text-xs sm:text-sm text-slate-400 mb-4 leading-relaxed">
+              Прозора сітка нарахування бонусів, виконання KPI, бонуси за апсели та виплати.
+            </p>
+          </div>
+
+          <!-- RED BLOCK: What to learn (Fully red text & box) + Trigger button -->
+          <div class="pt-3 border-t border-slate-800/80">
+            <div class="mb-4 bg-rose-950/30 rounded-xl p-3 border border-rose-500/40">
+              <div class="text-[11px] font-bold text-rose-400 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                <i class="fas fa-exclamation-circle text-rose-400 text-xs"></i>
+                <span>ЩО ТРЕБА ЗНАТИ:</span>
+              </div>
+              <p class="text-xs text-rose-300 font-medium leading-relaxed">З чого складається заробітна плата, які плани потрібно виконувати для максимального бонусу.</p>
+            </div>
+
+            <button onclick="openViewer('motivation-pdf')" class="w-full py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/20 transition-all">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+              Відкрити матеріал
+            </button>
+          </div>
+        </div><div class="group bg-slate-900/80 hover:bg-slate-800/90 border border-slate-800 hover:border-indigo-500/50 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/5 relative overflow-hidden">
+          <div>
+            <!-- Header badge -->
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="text-xs px-2.5 py-1 rounded-md font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                Таблиця МАЄ ВНИЗУ ЛИСТИ З ІНФОРМАЦІЄЮ
+              </span>
+            </div>
+
+            <!-- Title & icon -->
+            <div class="flex items-start gap-3 mb-3">
+              <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-base leading-snug group-hover:text-indigo-400 transition-colors">
+                  4. Регламент роботи
+                </h3>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <p class="text-xs sm:text-sm text-slate-400 mb-4 leading-relaxed">
+              Розпорядок робочого дня, графік змін, норми перерв та стандарти комунікації.
+            </p>
+          </div>
+
+          <!-- RED BLOCK: What to learn (Fully red text & box) + Trigger button -->
+          <div class="pt-3 border-t border-slate-800/80">
+            <div class="mb-4 bg-rose-950/30 rounded-xl p-3 border border-rose-500/40">
+              <div class="text-[11px] font-bold text-rose-400 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                <i class="fas fa-exclamation-circle text-rose-400 text-xs"></i>
+                <span>ЩО ТРЕБА ВИВЧИТИ:</span>
+              </div>
+              <p class="text-xs text-rose-300 font-medium leading-relaxed">УВАЖНО ВИВЧІТЬ КОЖЕН ЛИСТ ВНИЗУ ТАБЛИЦІ</p>
+            </div>
+
+            <button onclick="openViewer('regulations-sheet')" class="w-full py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/20 transition-all">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+              Відкрити матеріал
+            </button>
+          </div>
+        </div><div class="group bg-slate-900/80 hover:bg-slate-800/90 border border-slate-800 hover:border-indigo-500/50 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/5 relative overflow-hidden">
+          <div>
+            <!-- Header badge -->
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="text-xs px-2.5 py-1 rounded-md font-medium bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                Таблиця МАЄ ВНИЗУ ЛИСТИ З ІНФОРМАЦІЄЮ
+              </span>
+            </div>
+
+            <!-- Title & icon -->
+            <div class="flex items-start gap-3 mb-3">
+              <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-base leading-snug group-hover:text-indigo-400 transition-colors">
+                  5. Скрипти 2.0 (Основні ТОВАРИ)
+                </h3>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <p class="text-xs sm:text-sm text-slate-400 mb-4 leading-relaxed">
+              Повний алгоритм дзвінка: привітання, виявлення болю, презентація та закриття угоди.
+            </p>
+          </div>
+
+          <!-- RED BLOCK: What to learn (Fully red text & box) + Trigger button -->
+          <div class="pt-3 border-t border-slate-800/80">
+            <div class="mb-4 bg-rose-950/30 rounded-xl p-3 border border-rose-500/40">
+              <div class="text-[11px] font-bold text-rose-400 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                <i class="fas fa-exclamation-circle text-rose-400 text-xs"></i>
+                <span>ТРЕБА ВИВЧИТИ ІНФОРМАЦІЮ В ЛИСТАХ:</span>
+              </div>
+              <p class="text-xs text-rose-300 font-medium leading-relaxed">НІЖ САКУРІ БАТЧЕР,   НІЖ САТОРІ,    САТОРІ </p>
+            </div>
+
+            <button onclick="openViewer('scripts-main')" class="w-full py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/20 transition-all">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+              Відкрити матеріал
+            </button>
+          </div>
+        </div><div class="group bg-slate-900/80 hover:bg-slate-800/90 border border-slate-800 hover:border-indigo-500/50 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/5 relative overflow-hidden">
+          <div>
+            <!-- Header badge -->
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="text-xs px-2.5 py-1 rounded-md font-medium bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                Таблиця МАЄ ВНИЗУ ЛИСТИ З ІНФОРМАЦІЄЮ
+              </span>
+            </div>
+
+            <!-- Title & icon -->
+            <div class="flex items-start gap-3 mb-3">
+              <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-base leading-snug group-hover:text-indigo-400 transition-colors">
+                  6. Скрипт: Косметика
+                </h3>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <p class="text-xs sm:text-sm text-slate-400 mb-4 leading-relaxed">
+              Специфічні сценарії для ніші косметики, додаткові пропозиції (апсейл) та комплекти.
+            </p>
+          </div>
+
+          <!-- RED BLOCK: What to learn (Fully red text & box) + Trigger button -->
+          <div class="pt-3 border-t border-slate-800/80">
+            <div class="mb-4 bg-rose-950/30 rounded-xl p-3 border border-rose-500/40">
+              <div class="text-[11px] font-bold text-rose-400 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                <i class="fas fa-exclamation-circle text-rose-400 text-xs"></i>
+                <span> ТРЕБА ВИВЧИТИ ЛИСТ:</span>
+              </div>
+              <p class="text-xs text-rose-300 font-medium leading-relaxed">OLAVITA  ІНФО</p>
+            </div>
+
+            <button onclick="openViewer('scripts-cosmetics')" class="w-full py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/20 transition-all">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+              Відкрити матеріал
+            </button>
+          </div>
+        </div></div></main>
+
+  <footer class="border-t border-slate-800/80 py-6 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div id="footerText"></div>
+      <div id="footerSubText" class="text-slate-400"></div>
+    </div>
+  </footer>
+
+  <div id="modalBackdrop" class="fixed inset-0 z-50 bg-black/95 items-center justify-center p-2 sm:p-4 backdrop-blur-2xl hidden">
+    <div class="relative w-full h-[94vh] bg-black border border-indigo-500/30 rounded-3xl overflow-hidden flex flex-col shadow-2xl">
+      
+      <!-- Close button -->
+      <button onclick="closeViewer()" class="absolute top-3 right-4 z-30 w-11 h-11 rounded-full bg-rose-600 hover:bg-rose-500 text-white flex items-center justify-center font-bold text-lg shadow-xl hover:scale-110 hover:rotate-90 transition-all focus:outline-none" title="Закрити">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <!-- Modal header bar -->
+      <div class="px-6 py-3.5 bg-slate-950 border-b border-slate-800 flex items-center justify-between pr-20 shrink-0">
+        <div class="flex items-center gap-3 min-w-0">
+          <span id="modalBadge" class="text-[11px] px-2 py-0.5 rounded font-bold uppercase tracking-wider bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Таблиця МАЄ ВНИЗУ ЛИСТИ З ІНФОРМАЦІЄЮ</span>
+          <h3 id="modalTitle" class="text-sm sm:text-base font-bold text-white truncate">6. Скрипт: Косметика</h3>
+        </div>
+        <a id="modalExternalLink" href="https://docs.google.com/spreadsheets/d/1mj1D2fh_RfY0lp6RQmab2FGUcCHkBxIPdbJD1cN7o-Q/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-400 hover:text-indigo-400 flex items-center gap-1.5 font-medium transition-colors shrink-0 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+          <span>В окремій вкладці</span>
+          <i class="fas fa-external-link-alt text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- Embedded iframe container with loader overlay -->
+      <div class="flex-1 bg-black relative w-full h-full overflow-hidden flex items-center justify-center">
+        <div id="frameLoader" class="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-slate-950 text-indigo-400 z-20 pointer-events-none" style="display: none;">
+          <div class="w-12 h-12 border-4 border-indigo-950 border-t-indigo-500 rounded-full custom-spinner"></div>
+          <span class="text-xs font-semibold text-slate-400">Завантаження документа...</span>
+        </div>
+        <iframe id="contentIframe" class="w-full h-full border-0 relative z-10 block" allow="autoplay; fullscreen" allowfullscreen="" src=""></iframe>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="passwordModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md items-center justify-center p-4 hidden">
+    <div class="bg-slate-900 border border-slate-800 w-full max-w-sm rounded-2xl p-6 shadow-2xl relative">
+      <button onclick="closePasswordModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">✕</button>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center font-bold text-xl">🔒</div>
+        <div>
+          <h3 class="font-bold text-white text-base">Вхід в адмін-панель</h3>
+          <p class="text-xs text-slate-400">Введіть пароль доступу</p>
+        </div>
+      </div>
+      <form onsubmit="verifyAdminPassword(event)" class="space-y-4">
+        <div>
+          <input type="password" id="adminPasswordInput" placeholder="Пароль..." class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors">
+          <p id="passwordError" class="text-xs text-rose-400 mt-1.5 hidden">Невірний пароль! Спробуйте ще раз.</p>
+        </div>
+        <button type="submit" class="w-full py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-lg shadow-indigo-600/20 transition-all">
+          Увійти
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div id="adminModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md items-center justify-center p-3 sm:p-6 overflow-y-auto hidden">
+    <div class="bg-slate-900 border border-slate-800 w-full max-w-4xl max-h-[90vh] rounded-2xl flex flex-col shadow-2xl overflow-hidden my-auto">
+      
+      <!-- Admin Header -->
+      <div class="px-6 py-4 border-b border-slate-800 bg-slate-950 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <span class="text-xl">⚙️</span>
+          <div>
+            <h2 class="font-bold text-lg text-white">Панель Адміністратора</h2>
+            <p class="text-xs text-slate-400">Редагування написів, карток та експорт коду для GitHub</p>
+          </div>
+        </div>
+        <button onclick="toggleAdminModal()" class="text-slate-400 hover:text-white p-2 rounded-lg bg-slate-800 hover:bg-slate-700">✕</button>
+      </div>
+
+      <!-- Admin Content -->
+      <div class="p-6 overflow-y-auto space-y-8 flex-1 custom-scrollbar">
+        
+        <!-- Section 1: General Site Texts -->
+        <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-5 space-y-4">
+          <h3 class="text-sm font-bold text-indigo-400 uppercase tracking-wider">1. Загальні написи та заголовки</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs text-slate-400 mb-1">Назва компанії / бренду</label>
+              <input type="text" id="editSiteTitle" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+            </div>
+            <div>
+              <label class="block text-xs text-slate-400 mb-1">Тег у шапці (напр. Onboarding)</label>
+              <input type="text" id="editSiteTag" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs text-slate-400 mb-1">Підзаголовок шапки</label>
+            <input type="text" id="editSiteSubtitle" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          </div>
+
+          <div>
+            <label class="block text-xs text-slate-400 mb-1">Заголовок головного банера</label>
+            <input type="text" id="editHeroTitle" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          </div>
+
+          <div>
+            <label class="block text-xs text-slate-400 mb-1">Опис банера (пояснення що вивчити)</label>
+            <textarea id="editHeroDesc" rows="2" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+          </div>
+        </div>
+
+        <!-- Section 2: Cards Management -->
+        <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-5 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-bold text-indigo-400 uppercase tracking-wider">2. Картки матеріалів</h3>
+            <button onclick="addNewCardForm()" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold flex items-center gap-1.5 transition-colors">
+              <span>+ Додати нову картку</span>
+            </button>
+          </div>
+
+          <!-- Cards list in Admin -->
+          <div id="adminCardsList" class="space-y-3"><div class="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-3">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+            <span class="text-xs font-bold text-indigo-400">Картка #1</span>
+            <button onclick="removeCard(0)" class="text-xs text-rose-400 hover:text-rose-300 font-semibold px-2 py-1 rounded bg-rose-500/10 hover:bg-rose-500/20">Видалити</button>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Заголовок</label>
+              <input type="text" onchange="updateCardField(0, 'title', this.value)" value="1. Вступ. Загальна інформація" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Тип матеріалу (Бейдж)</label>
+              <input type="text" onchange="updateCardField(0, 'typeBadge', this.value)" value="Відео ОБОВ'ЯЗКОВО ПЕРЕГЛЯНУТИ" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Категорія</label>
+              <select onchange="updateCardField(0, 'category', this.value)" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+                <option value="video" selected="">🎥 Відео</option>
+                <option value="doc">📑 Регламент / PDF</option>
+                <option value="script">💬 Скрипт / Таблиця</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Короткий опис</label>
+              <input type="text" onchange="updateCardField(0, 'desc', this.value)" value="Загальний огляд компанії, цілі, стандарти роботи та ключові правила менеджера." class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+          </div>
+          
+          <!-- Editable Red Block: Label & Text -->
+          <div class="space-y-2 bg-rose-950/20 p-3 rounded-lg border border-rose-500/30">
+            <div>
+              <label class="block text-[11px] text-rose-400 font-bold mb-1">🔴 Заголовок червоного блоку (напр. "Що треба вивчити:")</label>
+              <input type="text" onchange="updateCardField(0, 'whatToLearnLabel', this.value)" value="ЩО ТРЕБА ВИВЧИТИ:" class="w-full bg-slate-950 border border-rose-500/40 rounded-lg px-2.5 py-1.5 text-xs text-rose-300 focus:outline-none focus:border-rose-500">
+            </div>
+            <div>
+              <label class="block text-[11px] text-rose-400 font-bold mb-1">🔴 Текст що треба вивчити (Червоний колір)</label>
+              <textarea onchange="updateCardField(0, 'whatToLearn', this.value)" rows="2" class="w-full bg-slate-950 border border-rose-500/40 rounded-lg px-2.5 py-1.5 text-xs text-rose-300 focus:outline-none focus:border-rose-500">Зрозуміти позиціювання бренду, формат взаємодії та внутрішню дисципліну команди.</textarea>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Посилання на Гугл Диск / Таблицю (edit / view / preview)</label>
+              <input type="text" onchange="updateCardField(0, 'embedUrl', this.value)" value="https://drive.google.com/file/d/1u_6Qjb5ivRGRFJUv8djtliL2D5fsUhkV/preview" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-300 font-mono">
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Пряме посилання (для нової вкладки)</label>
+              <input type="text" onchange="updateCardField(0, 'directUrl', this.value)" value="https://drive.google.com/file/d/1u_6Qjb5ivRGRFJUv8djtliL2D5fsUhkV/view?usp=drive_link" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-300 font-mono">
+            </div>
+          </div>
+        </div><div class="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-3">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+            <span class="text-xs font-bold text-indigo-400">Картка #2</span>
+            <button onclick="removeCard(1)" class="text-xs text-rose-400 hover:text-rose-300 font-semibold px-2 py-1 rounded bg-rose-500/10 hover:bg-rose-500/20">Видалити</button>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Заголовок</label>
+              <input type="text" onchange="updateCardField(1, 'title', this.value)" value="2. Робота в CRM-системі" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Тип матеріалу (Бейдж)</label>
+              <input type="text" onchange="updateCardField(1, 'typeBadge', this.value)" value="Відео ОБОВ'ЯЗКОВО ПЕРЕГЛЯНУТИ" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Категорія</label>
+              <select onchange="updateCardField(1, 'category', this.value)" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+                <option value="video" selected="">🎥 Відео</option>
+                <option value="doc">📑 Регламент / PDF</option>
+                <option value="script">💬 Скрипт / Таблиця</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Короткий опис</label>
+              <input type="text" onchange="updateCardField(1, 'desc', this.value)" value="Практичний розбір функціоналу CRM: обробка замовлень, статуси лідів і коментарі." class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+          </div>
+          
+          <!-- Editable Red Block: Label & Text -->
+          <div class="space-y-2 bg-rose-950/20 p-3 rounded-lg border border-rose-500/30">
+            <div>
+              <label class="block text-[11px] text-rose-400 font-bold mb-1">🔴 Заголовок червоного блоку (напр. "Що треба вивчити:")</label>
+              <input type="text" onchange="updateCardField(1, 'whatToLearnLabel', this.value)" value="ЩО ТРЕБА ВИВЧИТИ:" class="w-full bg-slate-950 border border-rose-500/40 rounded-lg px-2.5 py-1.5 text-xs text-rose-300 focus:outline-none focus:border-rose-500">
+            </div>
+            <div>
+              <label class="block text-[11px] text-rose-400 font-bold mb-1">🔴 Текст що треба вивчити (Червоний колір)</label>
+              <textarea onchange="updateCardField(1, 'whatToLearn', this.value)" rows="2" class="w-full bg-slate-950 border border-rose-500/40 rounded-lg px-2.5 py-1.5 text-xs text-rose-300 focus:outline-none focus:border-rose-500">Як швидко створювати картки, змінювати статуси та не губити клієнтські заявки.</textarea>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Посилання на Гугл Диск / Таблицю (edit / view / preview)</label>
+              <input type="text" onchange="updateCardField(1, 'embedUrl', this.value)" value="https://drive.google.com/file/d/13FHaW5n0X1F_t88A3oFeg7VMiom46ksG/preview" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-300 font-mono">
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Пряме посилання (для нової вкладки)</label>
+              <input type="text" onchange="updateCardField(1, 'directUrl', this.value)" value="https://drive.google.com/file/d/13FHaW5n0X1F_t88A3oFeg7VMiom46ksG/view?usp=drive_link" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-300 font-mono">
+            </div>
+          </div>
+        </div><div class="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-3">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+            <span class="text-xs font-bold text-indigo-400">Картка #3</span>
+            <button onclick="removeCard(2)" class="text-xs text-rose-400 hover:text-rose-300 font-semibold px-2 py-1 rounded bg-rose-500/10 hover:bg-rose-500/20">Видалити</button>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Заголовок</label>
+              <input type="text" onchange="updateCardField(2, 'title', this.value)" value="3. Система мотивації" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Тип матеріалу (Бейдж)</label>
+              <input type="text" onchange="updateCardField(2, 'typeBadge', this.value)" value="PDF Документ" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Категорія</label>
+              <select onchange="updateCardField(2, 'category', this.value)" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+                <option value="video">🎥 Відео</option>
+                <option value="doc" selected="">📑 Регламент / PDF</option>
+                <option value="script">💬 Скрипт / Таблиця</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Короткий опис</label>
+              <input type="text" onchange="updateCardField(2, 'desc', this.value)" value="Прозора сітка нарахування бонусів, виконання KPI, бонуси за апсели та виплати." class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+          </div>
+          
+          <!-- Editable Red Block: Label & Text -->
+          <div class="space-y-2 bg-rose-950/20 p-3 rounded-lg border border-rose-500/30">
+            <div>
+              <label class="block text-[11px] text-rose-400 font-bold mb-1">🔴 Заголовок червоного блоку (напр. "Що треба вивчити:")</label>
+              <input type="text" onchange="updateCardField(2, 'whatToLearnLabel', this.value)" value="ЩО ТРЕБА ЗНАТИ:" class="w-full bg-slate-950 border border-rose-500/40 rounded-lg px-2.5 py-1.5 text-xs text-rose-300 focus:outline-none focus:border-rose-500">
+            </div>
+            <div>
+              <label class="block text-[11px] text-rose-400 font-bold mb-1">🔴 Текст що треба вивчити (Червоний колір)</label>
+              <textarea onchange="updateCardField(2, 'whatToLearn', this.value)" rows="2" class="w-full bg-slate-950 border border-rose-500/40 rounded-lg px-2.5 py-1.5 text-xs text-rose-300 focus:outline-none focus:border-rose-500">З чого складається заробітна плата, які плани потрібно виконувати для максимального бонусу.</textarea>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Посилання на Гугл Диск / Таблицю (edit / view / preview)</label>
+              <input type="text" onchange="updateCardField(2, 'embedUrl', this.value)" value="https://drive.google.com/file/d/17WMrwfZMu_8IDXP3XedgJzNSJJAwv2Is/preview" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-300 font-mono">
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Пряме посилання (для нової вкладки)</label>
+              <input type="text" onchange="updateCardField(2, 'directUrl', this.value)" value="https://drive.google.com/file/d/17WMrwfZMu_8IDXP3XedgJzNSJJAwv2Is/view?usp=drive_link" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-300 font-mono">
+            </div>
+          </div>
+        </div><div class="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-3">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+            <span class="text-xs font-bold text-indigo-400">Картка #4</span>
+            <button onclick="removeCard(3)" class="text-xs text-rose-400 hover:text-rose-300 font-semibold px-2 py-1 rounded bg-rose-500/10 hover:bg-rose-500/20">Видалити</button>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Заголовок</label>
+              <input type="text" onchange="updateCardField(3, 'title', this.value)" value="4. Регламент роботи" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Тип матеріалу (Бейдж)</label>
+              <input type="text" onchange="updateCardField(3, 'typeBadge', this.value)" value="Таблиця МАЄ ВНИЗУ ЛИСТИ З ІНФОРМАЦІЄЮ" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Категорія</label>
+              <select onchange="updateCardField(3, 'category', this.value)" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+                <option value="video">🎥 Відео</option>
+                <option value="doc" selected="">📑 Регламент / PDF</option>
+                <option value="script">💬 Скрипт / Таблиця</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Короткий опис</label>
+              <input type="text" onchange="updateCardField(3, 'desc', this.value)" value="Розпорядок робочого дня, графік змін, норми перерв та стандарти комунікації." class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+          </div>
+          
+          <!-- Editable Red Block: Label & Text -->
+          <div class="space-y-2 bg-rose-950/20 p-3 rounded-lg border border-rose-500/30">
+            <div>
+              <label class="block text-[11px] text-rose-400 font-bold mb-1">🔴 Заголовок червоного блоку (напр. "Що треба вивчити:")</label>
+              <input type="text" onchange="updateCardField(3, 'whatToLearnLabel', this.value)" value="ЩО ТРЕБА ВИВЧИТИ:" class="w-full bg-slate-950 border border-rose-500/40 rounded-lg px-2.5 py-1.5 text-xs text-rose-300 focus:outline-none focus:border-rose-500">
+            </div>
+            <div>
+              <label class="block text-[11px] text-rose-400 font-bold mb-1">🔴 Текст що треба вивчити (Червоний колір)</label>
+              <textarea onchange="updateCardField(3, 'whatToLearn', this.value)" rows="2" class="w-full bg-slate-950 border border-rose-500/40 rounded-lg px-2.5 py-1.5 text-xs text-rose-300 focus:outline-none focus:border-rose-500">УВАЖНО ВИВЧІТЬ КОЖЕН ЛИСТ ВНИЗУ ТАБЛИЦІ</textarea>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Посилання на Гугл Диск / Таблицю (edit / view / preview)</label>
+              <input type="text" onchange="updateCardField(3, 'embedUrl', this.value)" value="https://docs.google.com/spreadsheets/d/1ku8lOPpy6Fh3jR_n8cn0lAUmmLWGJDTCEK3HT2Ol6Vo/edit?rm=minimal" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-300 font-mono">
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Пряме посилання (для нової вкладки)</label>
+              <input type="text" onchange="updateCardField(3, 'directUrl', this.value)" value="https://docs.google.com/spreadsheets/d/1ku8lOPpy6Fh3jR_n8cn0lAUmmLWGJDTCEK3HT2Ol6Vo/edit?usp=drive_link" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-300 font-mono">
+            </div>
+          </div>
+        </div><div class="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-3">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+            <span class="text-xs font-bold text-indigo-400">Картка #5</span>
+            <button onclick="removeCard(4)" class="text-xs text-rose-400 hover:text-rose-300 font-semibold px-2 py-1 rounded bg-rose-500/10 hover:bg-rose-500/20">Видалити</button>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Заголовок</label>
+              <input type="text" onchange="updateCardField(4, 'title', this.value)" value="5. Скрипти 2.0 (Основні ТОВАРИ)" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Тип матеріалу (Бейдж)</label>
+              <input type="text" onchange="updateCardField(4, 'typeBadge', this.value)" value="Таблиця МАЄ ВНИЗУ ЛИСТИ З ІНФОРМАЦІЄЮ" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Категорія</label>
+              <select onchange="updateCardField(4, 'category', this.value)" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+                <option value="video">🎥 Відео</option>
+                <option value="doc">📑 Регламент / PDF</option>
+                <option value="script" selected="">💬 Скрипт / Таблиця</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Короткий опис</label>
+              <input type="text" onchange="updateCardField(4, 'desc', this.value)" value="Повний алгоритм дзвінка: привітання, виявлення болю, презентація та закриття угоди." class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+          </div>
+          
+          <!-- Editable Red Block: Label & Text -->
+          <div class="space-y-2 bg-rose-950/20 p-3 rounded-lg border border-rose-500/30">
+            <div>
+              <label class="block text-[11px] text-rose-400 font-bold mb-1">🔴 Заголовок червоного блоку (напр. "Що треба вивчити:")</label>
+              <input type="text" onchange="updateCardField(4, 'whatToLearnLabel', this.value)" value="ТРЕБА ВИВЧИТИ ІНФОРМАЦІЮ В ЛИСТАХ:" class="w-full bg-slate-950 border border-rose-500/40 rounded-lg px-2.5 py-1.5 text-xs text-rose-300 focus:outline-none focus:border-rose-500">
+            </div>
+            <div>
+              <label class="block text-[11px] text-rose-400 font-bold mb-1">🔴 Текст що треба вивчити (Червоний колір)</label>
+              <textarea onchange="updateCardField(4, 'whatToLearn', this.value)" rows="2" class="w-full bg-slate-950 border border-rose-500/40 rounded-lg px-2.5 py-1.5 text-xs text-rose-300 focus:outline-none focus:border-rose-500">НІЖ САКУРІ БАТЧЕР,   НІЖ САТОРІ,    САТОРІ </textarea>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Посилання на Гугл Диск / Таблицю (edit / view / preview)</label>
+              <input type="text" onchange="updateCardField(4, 'embedUrl', this.value)" value="https://docs.google.com/spreadsheets/d/1GU1bWWbqblwtAfgmt64P9UDbT8VB3CND5INw0TYQzMw/edit?rm=minimal" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-300 font-mono">
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Пряме посилання (для нової вкладки)</label>
+              <input type="text" onchange="updateCardField(4, 'directUrl', this.value)" value="https://docs.google.com/spreadsheets/d/1GU1bWWbqblwtAfgmt64P9UDbT8VB3CND5INw0TYQzMw/edit?usp=drive_link" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-300 font-mono">
+            </div>
+          </div>
+        </div><div class="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-3">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+            <span class="text-xs font-bold text-indigo-400">Картка #6</span>
+            <button onclick="removeCard(5)" class="text-xs text-rose-400 hover:text-rose-300 font-semibold px-2 py-1 rounded bg-rose-500/10 hover:bg-rose-500/20">Видалити</button>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Заголовок</label>
+              <input type="text" onchange="updateCardField(5, 'title', this.value)" value="6. Скрипт: Косметика" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Тип матеріалу (Бейдж)</label>
+              <input type="text" onchange="updateCardField(5, 'typeBadge', this.value)" value="Таблиця МАЄ ВНИЗУ ЛИСТИ З ІНФОРМАЦІЄЮ" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Категорія</label>
+              <select onchange="updateCardField(5, 'category', this.value)" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+                <option value="video">🎥 Відео</option>
+                <option value="doc">📑 Регламент / PDF</option>
+                <option value="script" selected="">💬 Скрипт / Таблиця</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Короткий опис</label>
+              <input type="text" onchange="updateCardField(5, 'desc', this.value)" value="Специфічні сценарії для ніші косметики, додаткові пропозиції (апсейл) та комплекти." class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+          </div>
+          
+          <!-- Editable Red Block: Label & Text -->
+          <div class="space-y-2 bg-rose-950/20 p-3 rounded-lg border border-rose-500/30">
+            <div>
+              <label class="block text-[11px] text-rose-400 font-bold mb-1">🔴 Заголовок червоного блоку (напр. "Що треба вивчити:")</label>
+              <input type="text" onchange="updateCardField(5, 'whatToLearnLabel', this.value)" value=" ТРЕБА ВИВЧИТИ ЛИСТ:" class="w-full bg-slate-950 border border-rose-500/40 rounded-lg px-2.5 py-1.5 text-xs text-rose-300 focus:outline-none focus:border-rose-500">
+            </div>
+            <div>
+              <label class="block text-[11px] text-rose-400 font-bold mb-1">🔴 Текст що треба вивчити (Червоний колір)</label>
+              <textarea onchange="updateCardField(5, 'whatToLearn', this.value)" rows="2" class="w-full bg-slate-950 border border-rose-500/40 rounded-lg px-2.5 py-1.5 text-xs text-rose-300 focus:outline-none focus:border-rose-500">OLAVITA  ІНФО</textarea>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Посилання на Гугл Диск / Таблицю (edit / view / preview)</label>
+              <input type="text" onchange="updateCardField(5, 'embedUrl', this.value)" value="https://docs.google.com/spreadsheets/d/1mj1D2fh_RfY0lp6RQmab2FGUcCHkBxIPdbJD1cN7o-Q/edit?rm=minimal" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-300 font-mono">
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Пряме посилання (для нової вкладки)</label>
+              <input type="text" onchange="updateCardField(5, 'directUrl', this.value)" value="https://docs.google.com/spreadsheets/d/1mj1D2fh_RfY0lp6RQmab2FGUcCHkBxIPdbJD1cN7o-Q/edit?usp=drive_link" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-300 font-mono">
+            </div>
+          </div>
+        </div></div>
+        </div>
+
+        <!-- Section 3: GitHub Export -->
+        <div class="bg-indigo-950/40 border border-indigo-800/60 rounded-xl p-5 space-y-3">
+          <h3 class="text-sm font-bold text-indigo-300 uppercase tracking-wider">3. Заливка змін на GitHub</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Після внесення всіх змін натисніть кнопку нижче. Браузер згенерує та завантажить готовий файл <code class="bg-slate-900 px-1.5 py-0.5 rounded text-indigo-300">index.html</code> з усіма вашими оновленнями. Вам залишиться лише замінити цей файл у своєму GitHub-репозиторії!
+          </p>
+          <button onclick="exportCodeForGithub()" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-sm shadow-lg shadow-emerald-600/20 flex items-center justify-center gap-2 transition-all">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+            Завантажити новий index.html для GitHub
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Admin Footer -->
+      <div class="px-6 py-4 border-t border-slate-800 bg-slate-950 flex items-center justify-between">
+        <span class="text-xs text-slate-500">Зміни зберігаються локально та при експорті файлу</span>
+        <div class="flex items-center gap-3">
+          <button onclick="toggleAdminModal()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold">Закрити</button>
+          <button onclick="saveAdminChanges()" class="px-5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-lg shadow-indigo-600/20">Застосувати зміни</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Configuration for site texts
+    let siteConfig = {
+  "title": "SELECART",
+  "tag": "СТАЖУВАННЯ",
+  "subtitle": "Навчальний центр для нових менеджерів",
+  "heroTitle": "НА КОЖНІЙ КАРТЦІ ЧЕРВОНИМ ПОЗНАЧЕНО, ЩО ТРЕБА ВИВЧИТИ",
+  "heroDesc": "ОЗНАЙОМТЕСЯ З КОЖНИМ БЛОКОМ ПО ЧЕРЗІ:  перегляньте відеоінструкції, розбери мотивацію та вивчи робочі скрипти діалогів. Натискай \"ВІДКРИТИ МАТЕРІАЛ\"  для перегляду",
+  "footerText": "",
+  "footerSubText": ""
+};
+
+    // Database of materials
+    let materials = [
+  {
+    "id": "intro-video",
+    "title": "1. Вступ. Загальна інформація",
+    "category": "video",
+    "typeBadge": "Відео ОБОВ'ЯЗКОВО ПЕРЕГЛЯНУТИ",
+    "badgeColor": "bg-rose-500/10 text-rose-400 border border-rose-500/20",
+    "desc": "Загальний огляд компанії, цілі, стандарти роботи та ключові правила менеджера.",
+    "embedUrl": "https://drive.google.com/file/d/1u_6Qjb5ivRGRFJUv8djtliL2D5fsUhkV/preview",
+    "directUrl": "https://drive.google.com/file/d/1u_6Qjb5ivRGRFJUv8djtliL2D5fsUhkV/view?usp=drive_link",
+    "whatToLearnLabel": "ЩО ТРЕБА ВИВЧИТИ:",
+    "whatToLearn": "Зрозуміти позиціювання бренду, формат взаємодії та внутрішню дисципліну команди."
+  },
+  {
+    "id": "crm-video",
+    "title": "2. Робота в CRM-системі",
+    "category": "video",
+    "typeBadge": "Відео ОБОВ'ЯЗКОВО ПЕРЕГЛЯНУТИ",
+    "badgeColor": "bg-rose-500/10 text-rose-400 border border-rose-500/20",
+    "desc": "Практичний розбір функціоналу CRM: обробка замовлень, статуси лідів і коментарі.",
+    "embedUrl": "https://drive.google.com/file/d/13FHaW5n0X1F_t88A3oFeg7VMiom46ksG/preview",
+    "directUrl": "https://drive.google.com/file/d/13FHaW5n0X1F_t88A3oFeg7VMiom46ksG/view?usp=drive_link",
+    "whatToLearnLabel": "ЩО ТРЕБА ВИВЧИТИ:",
+    "whatToLearn": "Як швидко створювати картки, змінювати статуси та не губити клієнтські заявки."
+  },
+  {
+    "id": "motivation-pdf",
+    "title": "3. Система мотивації",
+    "category": "doc",
+    "typeBadge": "PDF Документ",
+    "badgeColor": "bg-amber-500/10 text-amber-400 border border-amber-500/20",
+    "desc": "Прозора сітка нарахування бонусів, виконання KPI, бонуси за апсели та виплати.",
+    "embedUrl": "https://drive.google.com/file/d/17WMrwfZMu_8IDXP3XedgJzNSJJAwv2Is/preview",
+    "directUrl": "https://drive.google.com/file/d/17WMrwfZMu_8IDXP3XedgJzNSJJAwv2Is/view?usp=drive_link",
+    "whatToLearnLabel": "ЩО ТРЕБА ЗНАТИ:",
+    "whatToLearn": "З чого складається заробітна плата, які плани потрібно виконувати для максимального бонусу."
+  },
+  {
+    "id": "regulations-sheet",
+    "title": "4. Регламент роботи",
+    "category": "doc",
+    "typeBadge": "Таблиця МАЄ ВНИЗУ ЛИСТИ З ІНФОРМАЦІЄЮ",
+    "badgeColor": "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20",
+    "desc": "Розпорядок робочого дня, графік змін, норми перерв та стандарти комунікації.",
+    "embedUrl": "https://docs.google.com/spreadsheets/d/1ku8lOPpy6Fh3jR_n8cn0lAUmmLWGJDTCEK3HT2Ol6Vo/edit?rm=minimal",
+    "directUrl": "https://docs.google.com/spreadsheets/d/1ku8lOPpy6Fh3jR_n8cn0lAUmmLWGJDTCEK3HT2Ol6Vo/edit?usp=drive_link",
+    "whatToLearnLabel": "ЩО ТРЕБА ВИВЧИТИ:",
+    "whatToLearn": "УВАЖНО ВИВЧІТЬ КОЖЕН ЛИСТ ВНИЗУ ТАБЛИЦІ"
+  },
+  {
+    "id": "scripts-main",
+    "title": "5. Скрипти 2.0 (Основні ТОВАРИ)",
+    "category": "script",
+    "typeBadge": "Таблиця МАЄ ВНИЗУ ЛИСТИ З ІНФОРМАЦІЄЮ",
+    "badgeColor": "bg-indigo-500/10 text-indigo-400 border border-indigo-500/20",
+    "desc": "Повний алгоритм дзвінка: привітання, виявлення болю, презентація та закриття угоди.",
+    "embedUrl": "https://docs.google.com/spreadsheets/d/1GU1bWWbqblwtAfgmt64P9UDbT8VB3CND5INw0TYQzMw/edit?rm=minimal",
+    "directUrl": "https://docs.google.com/spreadsheets/d/1GU1bWWbqblwtAfgmt64P9UDbT8VB3CND5INw0TYQzMw/edit?usp=drive_link",
+    "whatToLearnLabel": "ТРЕБА ВИВЧИТИ ІНФОРМАЦІЮ В ЛИСТАХ:",
+    "whatToLearn": "НІЖ САКУРІ БАТЧЕР,   НІЖ САТОРІ,    САТОРІ "
+  },
+  {
+    "id": "scripts-cosmetics",
+    "title": "6. Скрипт: Косметика",
+    "category": "script",
+    "typeBadge": "Таблиця МАЄ ВНИЗУ ЛИСТИ З ІНФОРМАЦІЄЮ",
+    "badgeColor": "bg-indigo-500/10 text-indigo-400 border border-indigo-500/20",
+    "desc": "Специфічні сценарії для ніші косметики, додаткові пропозиції (апсейл) та комплекти.",
+    "embedUrl": "https://docs.google.com/spreadsheets/d/1mj1D2fh_RfY0lp6RQmab2FGUcCHkBxIPdbJD1cN7o-Q/edit?rm=minimal",
+    "directUrl": "https://docs.google.com/spreadsheets/d/1mj1D2fh_RfY0lp6RQmab2FGUcCHkBxIPdbJD1cN7o-Q/edit?usp=drive_link",
+    "whatToLearnLabel": " ТРЕБА ВИВЧИТИ ЛИСТ:",
+    "whatToLearn": "OLAVITA  ІНФО"
+  }
+];
+
+    // Load saved data from LocalStorage if available
+    const savedConfig = localStorage.getItem('selecart_config');
+    if (savedConfig) {
+      try { siteConfig = JSON.parse(savedConfig); } catch(e){}
+    }
+    const savedMaterials = localStorage.getItem('selecart_materials');
+    if (savedMaterials) {
+      try { materials = JSON.parse(savedMaterials); } catch(e){}
+    }
+
+    function formatEmbedUrl(rawUrl) {
+      if (!rawUrl) return '';
+      let url = rawUrl.trim();
+
+      // For Google Sheets: force /edit?rm=minimal
+      if (url.includes('docs.google.com/spreadsheets')) {
+        const match = url.match(/https:\/\/docs\.google\.com\/spreadsheets\/d\/([a-zA-Z0-9_-]+)/);
+        if (match) {
+          return `https://docs.google.com/spreadsheets/d/${match[1]}/edit?rm=minimal`;
+        }
+      }
+
+      // For Google Drive (Videos / PDFs): force /preview
+      if (url.includes('drive.google.com/file/d/')) {
+        const match = url.match(/https:\/\/drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)/);
+        if (match) {
+          return `https://drive.google.com/file/d/${match[1]}/preview`;
+        }
+      }
+
+      return url;
+    }
+
+    function getCategoryIcon(cat) {
+      if (cat === 'video') {
+        return `<svg class="w-6 h-6 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
+      } else if (cat === 'doc') {
+        return `<svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>`;
+      }
+      return `<svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>`;
+    }
+
+    function applySiteTexts() {
+      document.getElementById('siteTitle').textContent = siteConfig.title;
+      document.getElementById('siteTag').textContent = siteConfig.tag;
+      document.getElementById('siteSubtitle').textContent = siteConfig.subtitle;
+      document.getElementById('heroTitle').textContent = siteConfig.heroTitle;
+      document.getElementById('heroDesc').textContent = siteConfig.heroDesc;
+      if (document.getElementById('footerText')) document.getElementById('footerText').textContent = siteConfig.footerText || '';
+      if (document.getElementById('footerSubText')) document.getElementById('footerSubText').textContent = siteConfig.footerSubText || '';
+    }
+
+    function renderCards(filter = 'all') {
+      applySiteTexts();
+      const container = document.getElementById('cardsGrid');
+      container.innerHTML = '';
+
+      const filtered = filter === 'all' 
+        ? materials 
+        : materials.filter(m => m.category === filter);
+
+      filtered.forEach((item) => {
+        const card = document.createElement('div');
+        card.className = `group bg-slate-900/80 hover:bg-slate-800/90 border border-slate-800 hover:border-indigo-500/50 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/5 relative overflow-hidden`;
+
+        card.innerHTML = `
+          <div>
+            <!-- Header badge -->
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="text-xs px-2.5 py-1 rounded-md font-medium ${item.badgeColor || 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20'}">
+                ${item.typeBadge || 'Матеріал'}
+              </span>
+            </div>
+
+            <!-- Title & icon -->
+            <div class="flex items-start gap-3 mb-3">
+              <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                ${getCategoryIcon(item.category)}
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-base leading-snug group-hover:text-indigo-400 transition-colors">
+                  ${item.title}
+                </h3>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <p class="text-xs sm:text-sm text-slate-400 mb-4 leading-relaxed">
+              ${item.desc}
+            </p>
+          </div>
+
+          <!-- RED BLOCK: What to learn (Fully red text & box) + Trigger button -->
+          <div class="pt-3 border-t border-slate-800/80">
+            <div class="mb-4 bg-rose-950/30 rounded-xl p-3 border border-rose-500/40">
+              <div class="text-[11px] font-bold text-rose-400 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                <i class="fas fa-exclamation-circle text-rose-400 text-xs"></i>
+                <span>${item.whatToLearnLabel || 'Що треба вивчити:'}</span>
+              </div>
+              <p class="text-xs text-rose-300 font-medium leading-relaxed">${item.whatToLearn || 'Ознайомтеся з матеріалом.'}</p>
+            </div>
+
+            <button onclick="openViewer('${item.id}')" class="w-full py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/20 transition-all">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+              Відкрити матеріал
+            </button>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    function filterCategory(cat) {
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        if (btn.getAttribute('data-cat') === cat) {
+          btn.className = 'filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-indigo-600 text-white shadow-lg shadow-indigo-600/20';
+        } else {
+          btn.className = 'filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800';
+        }
+      });
+      renderCards(cat);
+    }
+
+    function openViewer(id) {
+      const item = materials.find(m => m.id === id);
+      if (!item) return;
+
+      document.getElementById('modalTitle').textContent = item.title;
+      document.getElementById('modalBadge').textContent = item.typeBadge || 'Матеріал';
+      document.getElementById('modalBadge').className = `text-[11px] px-2 py-0.5 rounded font-bold uppercase tracking-wider ${item.badgeColor || 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20'}`;
+      
+      document.getElementById('modalExternalLink').href = item.directUrl || item.embedUrl;
+
+      const iframe = document.getElementById('contentIframe');
+      const loader = document.getElementById('frameLoader');
+      
+      loader.style.display = 'flex';
+
+      const embedLink = formatEmbedUrl(item.embedUrl || item.directUrl);
+
+      iframe.src = embedLink;
+      
+      iframe.onload = () => {
+        loader.style.display = 'none';
+      };
+
+      const modal = document.getElementById('modalBackdrop');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeViewer() {
+      const modal = document.getElementById('modalBackdrop');
+      const iframe = document.getElementById('contentIframe');
+      const loader = document.getElementById('frameLoader');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      iframe.src = '';
+      loader.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    const ADMIN_PASSWORD = "43279";
+    let isAdminAuthenticated = false;
+
+    window.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'A' || e.key === 'a' || e.key === 'Ф' || e.key === 'ф')) {
+        e.preventDefault();
+        openAdminAccess();
+      }
+      if (e.key === 'Escape') {
+        closeViewer();
+        closePasswordModal();
+        const adminModal = document.getElementById('adminModal');
+        if (!adminModal.classList.contains('hidden')) toggleAdminModal();
+      }
+    });
+
+    function openAdminAccess() {
+      if (isAdminAuthenticated) {
+        toggleAdminModal();
+      } else {
+        openPasswordModal();
+      }
+    }
+
+    function openPasswordModal() {
+      const pModal = document.getElementById('passwordModal');
+      document.getElementById('adminPasswordInput').value = '';
+      document.getElementById('passwordError').classList.add('hidden');
+      pModal.classList.remove('hidden');
+      pModal.classList.add('flex');
+      setTimeout(() => document.getElementById('adminPasswordInput').focus(), 50);
+    }
+
+    function closePasswordModal() {
+      const pModal = document.getElementById('passwordModal');
+      pModal.classList.add('hidden');
+      pModal.classList.remove('flex');
+    }
+
+    function verifyAdminPassword(event) {
+      event.preventDefault();
+      const enteredPass = document.getElementById('adminPasswordInput').value;
+      if (enteredPass === ADMIN_PASSWORD) {
+        isAdminAuthenticated = true;
+        closePasswordModal();
+        toggleAdminModal();
+      } else {
+        document.getElementById('passwordError').classList.remove('hidden');
+      }
+    }
+
+    function toggleAdminModal() {
+      const modal = document.getElementById('adminModal');
+      if (modal.classList.contains('hidden')) {
+        document.getElementById('editSiteTitle').value = siteConfig.title;
+        document.getElementById('editSiteTag').value = siteConfig.tag;
+        document.getElementById('editSiteSubtitle').value = siteConfig.subtitle;
+        document.getElementById('editHeroTitle').value = siteConfig.heroTitle;
+        document.getElementById('editHeroDesc').value = siteConfig.heroDesc;
+
+        renderAdminCardsList();
+
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      } else {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    function renderAdminCardsList() {
+      const container = document.getElementById('adminCardsList');
+      container.innerHTML = '';
+
+      materials.forEach((item, index) => {
+        const cardBox = document.createElement('div');
+        cardBox.className = 'bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-3';
+        cardBox.innerHTML = `
+          <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+            <span class="text-xs font-bold text-indigo-400">Картка #${index + 1}</span>
+            <button onclick="removeCard(${index})" class="text-xs text-rose-400 hover:text-rose-300 font-semibold px-2 py-1 rounded bg-rose-500/10 hover:bg-rose-500/20">Видалити</button>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Заголовок</label>
+              <input type="text" onchange="updateCardField(${index}, 'title', this.value)" value="${item.title.replace(/"/g, '&quot;')}" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Тип матеріалу (Бейдж)</label>
+              <input type="text" onchange="updateCardField(${index}, 'typeBadge', this.value)" value="${(item.typeBadge || '').replace(/"/g, '&quot;')}" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Категорія</label>
+              <select onchange="updateCardField(${index}, 'category', this.value)" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+                <option value="video" ${item.category === 'video' ? 'selected' : ''}>🎥 Відео</option>
+                <option value="doc" ${item.category === 'doc' ? 'selected' : ''}>📑 Регламент / PDF</option>
+                <option value="script" ${item.category === 'script' ? 'selected' : ''}>💬 Скрипт / Таблиця</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Короткий опис</label>
+              <input type="text" onchange="updateCardField(${index}, 'desc', this.value)" value="${(item.desc || '').replace(/"/g, '&quot;')}" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white">
+            </div>
+          </div>
+          
+          <!-- Editable Red Block: Label & Text -->
+          <div class="space-y-2 bg-rose-950/20 p-3 rounded-lg border border-rose-500/30">
+            <div>
+              <label class="block text-[11px] text-rose-400 font-bold mb-1">🔴 Заголовок червоного блоку (напр. "Що треба вивчити:")</label>
+              <input type="text" onchange="updateCardField(${index}, 'whatToLearnLabel', this.value)" value="${(item.whatToLearnLabel || 'Що треба вивчити:').replace(/"/g, '&quot;')}" class="w-full bg-slate-950 border border-rose-500/40 rounded-lg px-2.5 py-1.5 text-xs text-rose-300 focus:outline-none focus:border-rose-500">
+            </div>
+            <div>
+              <label class="block text-[11px] text-rose-400 font-bold mb-1">🔴 Текст що треба вивчити (Червоний колір)</label>
+              <textarea onchange="updateCardField(${index}, 'whatToLearn', this.value)" rows="2" class="w-full bg-slate-950 border border-rose-500/40 rounded-lg px-2.5 py-1.5 text-xs text-rose-300 focus:outline-none focus:border-rose-500">${(item.whatToLearn || '').replace(/"/g, '&quot;')}</textarea>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Посилання на Гугл Диск / Таблицю (edit / view / preview)</label>
+              <input type="text" onchange="updateCardField(${index}, 'embedUrl', this.value)" value="${(item.embedUrl || '').replace(/"/g, '&quot;')}" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-300 font-mono">
+            </div>
+            <div>
+              <label class="block text-[11px] text-slate-400 mb-1">Пряме посилання (для нової вкладки)</label>
+              <input type="text" onchange="updateCardField(${index}, 'directUrl', this.value)" value="${(item.directUrl || '').replace(/"/g, '&quot;')}" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-300 font-mono">
+            </div>
+          </div>
+        `;
+        container.appendChild(cardBox);
+      });
+    }
+
+    function updateCardField(index, field, value) {
+      materials[index][field] = value;
+      if (field === 'category') {
+        if (value === 'video') materials[index].badgeColor = "bg-rose-500/10 text-rose-400 border border-rose-500/20";
+        else if (value === 'doc') materials[index].badgeColor = "bg-amber-500/10 text-amber-400 border border-amber-500/20";
+        else materials[index].badgeColor = "bg-indigo-500/10 text-indigo-400 border border-indigo-500/20";
+      }
+    }
+
+    function removeCard(index) {
+      materials.splice(index, 1);
+      renderAdminCardsList();
+    }
+
+    function addNewCardForm() {
+      materials.push({
+        id: "card-" + Date.now(),
+        title: "Нова навчальна картка",
+        category: "script",
+        typeBadge: "Таблиця",
+        badgeColor: "bg-indigo-500/10 text-indigo-400 border border-indigo-500/20",
+        desc: "Опис нового матеріалу",
+        embedUrl: "https://docs.google.com/spreadsheets/d/.../edit?rm=minimal",
+        directUrl: "https://docs.google.com/spreadsheets/d/...",
+        whatToLearnLabel: "Що треба вивчити:",
+        whatToLearn: "Що потрібно вивчити в цьому матеріалі"
+      });
+      renderAdminCardsList();
+    }
+
+    function saveAdminChanges() {
+      siteConfig.title = document.getElementById('editSiteTitle').value;
+      siteConfig.tag = document.getElementById('editSiteTag').value;
+      siteConfig.subtitle = document.getElementById('editSiteSubtitle').value;
+      siteConfig.heroTitle = document.getElementById('editHeroTitle').value;
+      siteConfig.heroDesc = document.getElementById('editHeroDesc').value;
+
+      localStorage.setItem('selecart_config', JSON.stringify(siteConfig));
+      localStorage.setItem('selecart_materials', JSON.stringify(materials));
+
+      renderCards();
+      toggleAdminModal();
+    }
+
+    function exportCodeForGithub() {
+      saveAdminChanges();
+
+      const configRegex = /let siteConfig = \{[\s\S]*?\};/;
+      const materialsRegex = /let materials = \[[\s\S]*?\];/;
+
+      const newConfigStr = `let siteConfig = ${JSON.stringify(siteConfig, null, 2)};`;
+      const newMaterialsStr = `let materials = ${JSON.stringify(materials, null, 2)};`;
+
+      let updatedHTML = "<!DOCTYPE html>\n<html lang=\"uk\" class=\"h-full bg-slate-950 text-slate-100\">\n" + 
+        document.documentElement.innerHTML + 
+        "\n</html>";
+
+      updatedHTML = updatedHTML.replace(configRegex, newConfigStr);
+      updatedHTML = updatedHTML.replace(materialsRegex, newMaterialsStr);
+
+      const blob = new Blob([updatedHTML], { type: 'text/html;charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'index.html';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Initialize application on load
+    renderCards();
+  </script>
+
+</body>
+</html>
